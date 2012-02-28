@@ -3,7 +3,7 @@ A [giter8][g8] template for [Google App Engine][gae] [Unfiltered][unfiltered] ap
 
 ## install
 
-Build with [sbt 0.10.x][sbt]
+Build with [sbt 0.11.x][sbt]
 
     # download and copy google app engines sdk to /path/to/your/gae-home
     export APPENGINE_SDK_HOME=/path/to/your/gae-home
