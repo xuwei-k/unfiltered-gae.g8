@@ -25,11 +25,9 @@ Seq(Compile, Test).flatMap(c =>
 scalacOptions ++= "-deprecation" :: "unchecked" :: "-feature" :: Nil
 
 libraryDependencies ++= Seq(
-  "net.databinder" %% "unfiltered-filter" % "$unfiltered_version$",
-  "net.databinder" %% "unfiltered-specs2" % "$unfiltered_version$" % "test"
-  // uncomment the following line for persistence
-  //, val jdo = "javax.jdo" % "jdo2-api" % "2.3-ea"
+  "ws.unfiltered" %% "unfiltered-filter" % "$unfiltered_version$",
+  "ws.unfiltered" %% "unfiltered-specs2" % "$unfiltered_version$" % "test"
 ) ++ Seq( // local testing
-  "javax.servlet" % "servlet-api" % "2.3" % "provided",
-   "org.eclipse.jetty" % "jetty-webapp" % "7.4.5.v20110725" % "container"
+  "javax.servlet" % "javax.servlet-api" % "3.1.0" % "provided",
+   "org.eclipse.jetty" % "jetty-webapp" % "9.2.21.v20170120" % "container"
 )

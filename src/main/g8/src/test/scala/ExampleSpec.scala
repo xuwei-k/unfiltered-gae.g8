@@ -1,21 +1,19 @@
 package $org_id$
 
 import org.specs2.mutable.Specification
-
-import dispatch.classic._
+import okhttp3._
 
 object ExampleSpec extends Specification with unfiltered.specs2.jetty.Served {
-  
-  def setup = { _.plan(new App) }
-  
-  val http = new Http
-  
+
+  override def setup() = { _.plan(new App) }
+
+  val http = new OkHttpClient()
+
   "The example app" should {
     "serve unfiltered requests" in {
-      val status = http x (host as_str) {
-        case (code, _, _, _) => code
-      }
-      status must_== 200
+      val request = new Request.Builder().url(host).build()
+      val response = http.newCall(request).execute()
+      response.code must_== 200
     }
   }
 }

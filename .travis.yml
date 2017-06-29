@@ -1,8 +1,13 @@
 language: scala
 sudo: false
-jdk: oraclejdk7
+jdk: oraclejdk8
 scala:
   - 2.10.6
-  - 2.11.8
+  - 2.11.11
+  - 2.12.2
 script:
   - ./travis.sh
+addons:
+  apt:
+    packages:
+    - oracle-java8-installer

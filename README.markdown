@@ -1,9 +1,5 @@
 A [giter8][g8] template for [Google App Engine][gae] [Unfiltered][unfiltered] applications.
 
-## Note
-
-Can't use Scala 2.12 with [Google App Engine Standard Environment](https://cloud.google.com/appengine/docs/about-the-standard-environment) because GAE Standard Environment does not support Java 8.
-
 ## install
 
 Build with [sbt][sbt]

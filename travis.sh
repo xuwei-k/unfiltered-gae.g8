@@ -2,7 +2,7 @@
 
 set -eu
 
-SDK=appengine-java-sdk-1.9.50
+SDK=appengine-java-sdk-1.9.54
 SDK_ZIP=${SDK}.zip
 wget https://storage.googleapis.com/appengine-sdks/featured/${SDK_ZIP}
 unzip ${SDK_ZIP}
