@@ -19,10 +19,6 @@ To run through the appengine SDK
 
 Point your browser at http://localhost:8080/
 
-## TODO
-
-* yaml configs - http://code.google.com/appengine/docs/java/configyaml/appconfig_yaml.html
-
 [sbt]: http://www.scala-sbt.org/
 [gaesbt]: https://github.com/sbt/sbt-appengine
 [g8]: http://github.com/foundweekends/giter8#readme
