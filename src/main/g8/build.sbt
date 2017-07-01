@@ -6,7 +6,7 @@ version := "$version$"
 
 scalaVersion := "$scala_version$"
 
-appengineSettings
+enablePlugins(AppenginePlugin)
 
 val unusedWarnings = (
   "-Ywarn-unused" ::
