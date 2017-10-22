@@ -29,5 +29,5 @@ libraryDependencies ++= Seq(
   "ws.unfiltered" %% "unfiltered-specs2" % "$unfiltered_version$" % "test"
 ) ++ Seq( // local testing
   "javax.servlet" % "javax.servlet-api" % "3.1.0" % "provided",
-   "org.eclipse.jetty" % "jetty-webapp" % "9.2.21.v20170120" % "container"
+   "org.eclipse.jetty" % "jetty-webapp" % "$jetty_version$" % "container"
 )
