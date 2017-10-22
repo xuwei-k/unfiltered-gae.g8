@@ -9,4 +9,4 @@ unzip ${SDK_ZIP}
 unset APPENGINE_SDK_HOME
 export APPENGINE_SDK_HOME=$(pwd)/$SDK
 
-sbt ";set g8Properties in g8 in Test ~= { _ + (\"scala_version\" -> \"$TRAVIS_SCALA_VERSION\")}; g8Test"
+sbt ";set g8Properties in g8 in Test ~= { _ ++ Map((\"scala_version\" -> \"$TRAVIS_SCALA_VERSION\"), (\"sbt_version\" -> \"$SBT_VERSION\")) }; g8Test"
