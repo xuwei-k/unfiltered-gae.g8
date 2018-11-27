@@ -8,11 +8,7 @@ scalaVersion := "$scala_version$"
 
 enablePlugins(AppenginePlugin)
 
-val unusedWarnings = (
-  "-Ywarn-unused" ::
-  "-Ywarn-unused-import" ::
-  Nil
-)
+val unusedWarnings = Seq("-Ywarn-unused")
 
 scalacOptions ++= PartialFunction.condOpt(CrossVersion.partialVersion(scalaVersion.value)){
   case Some((2, v)) if v >= 11 => unusedWarnings
