@@ -20,9 +20,11 @@ Seq(Compile, Test).flatMap(c =>
 
 scalacOptions ++= "-deprecation" :: "unchecked" :: "-feature" :: Nil
 
+val unfilteredVersion = "$unfiltered_version$"
+
 libraryDependencies ++= Seq(
-  "ws.unfiltered" %% "unfiltered-filter" % "$unfiltered_version$",
-  "ws.unfiltered" %% "unfiltered-specs2" % "$unfiltered_version$" % "test"
+  "ws.unfiltered" %% "unfiltered-filter" % unfilteredVersion,
+  "ws.unfiltered" %% "unfiltered-specs2" % unfilteredVersion % "test"
 ) ++ Seq( // local testing
   "javax.servlet" % "javax.servlet-api" % "3.1.0" % "provided",
    "org.eclipse.jetty" % "jetty-webapp" % "$jetty_version$" % "container"
